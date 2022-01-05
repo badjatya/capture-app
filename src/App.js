@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+
+// Importing pages
+import AboutUs from "./pages/AboutUs";
 
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <AboutUs />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
