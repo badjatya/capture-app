@@ -12,10 +12,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Inter', sans-serif;
     }
 
-    .logo {
-        font-family: 'Lobster', cursive;
-    }
-
     button {
         font-weight: bold;
         font-size: 1.1rem;
