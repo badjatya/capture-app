@@ -4,7 +4,7 @@ import React from "react";
 import AboutUs from "./pages/AboutUs";
 
 // Importing Global Style
-import GlobalStyle from "./GlobalStyle";
+import GlobalStyle from "./styles/GlobalStyle";
 
 const App = () => {
   return (
