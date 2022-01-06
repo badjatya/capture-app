@@ -41,7 +41,9 @@ const AboutSection = () => {
 };
 
 // Styled components
-const StyledAbout = styled(StyledLayout)``;
+const StyledAbout = styled(StyledLayout)`
+  margin-top: 5vh;
+`;
 
 const StyledHide = styled.div`
   overflow: hidden;
