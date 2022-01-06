@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
+import MovieDetail from "./pages/MovieDetail";
 
 // Importing Global Style
 import GlobalStyle from "./styles/GlobalStyle";
@@ -22,6 +23,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<AboutUs />} />
         <Route path="/work" element={<OurWork />} />
+        <Route path="/work/:id" element={<MovieDetail />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </>
