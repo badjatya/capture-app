@@ -38,6 +38,10 @@ const StyledNav = styled.nav`
   margin: auto;
   padding: 1rem 10rem;
   background: #282828;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   a {
     color: #fff;
@@ -58,6 +62,11 @@ const StyledNav = styled.nav`
     font-size: 1.5rem;
     font-weight: lighter;
     font-family: "Lobster", cursive;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: #23d997;
+    }
   }
 `;
 
