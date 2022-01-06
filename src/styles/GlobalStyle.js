@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     p {
         padding: 3rem 0rem;
         color: #cccccc;
-        font-size: 1.4rem;
+        font-size: 1rem;
         line-height: 150%;
     }
 
