@@ -42,7 +42,7 @@ const AboutSection = () => {
 
 // Styled components
 const StyledAbout = styled(StyledLayout)`
-  margin-top: 5vh;
+  margin-top: 4vh;
 `;
 
 const StyledHide = styled.div`
