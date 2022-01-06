@@ -1,26 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Import Lib
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-// Import Images
-import athleteImage from "../img/athlete-small.png";
-import theRacerImage from "../img/theracer-small.png";
-import goodTimesImage from "../img/goodtimes-small.png";
+// Import data
+import MoviesData from "../data/movieData";
 
 const OurWork = () => {
+  // State
+  const [movies] = useState(MoviesData());
   return (
     <StyledWork>
-      <StyledMovie>
+      {movies.map((movie) => (
+        <StyledMovie key={movie.id}>
+          <h2>{movie.title}</h2>
+          <div className="line" />
+          <Link to={`/work/${movie.id}`}>
+            <img src={movie.mainImg} alt={movie.title} />
+          </Link>
+        </StyledMovie>
+      ))}
+
+      {/* <StyledMovie>
         <h2>The Athlete</h2>
         <div className="line" />
         <Link to="/work/athlete">
           <img src={athleteImage} alt="athlete pic" />
         </Link>
-      </StyledMovie>
+      </StyledMovie> */}
 
-      <StyledMovie>
+      {/* <StyledMovie>
         <h2>The Racer</h2>
         <div className="line" />
         <Link to="/work/racer">
@@ -34,7 +44,7 @@ const OurWork = () => {
         <Link to="/work/good">
           <img src={goodTimesImage} alt="good times pic" />
         </Link>
-      </StyledMovie>
+      </StyledMovie> */}
     </StyledWork>
   );
 };
