@@ -7,71 +7,44 @@ import home1 from "../img/home1.png";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import {
+  titleAnimation,
+  fadeAnimation,
+  photoAnimation,
+} from "../styles/animations";
+import {
   StyledLayout,
   StyledDescription,
   StyledImage,
 } from "../styles/layoutStyles";
 
-// const AnimateDescription = {
-//   hidden: { x: 100 },
-//   show: {
-//     x: 0,
-//     transition: {
-//       duration: 1,
-//       ease: "easeOut",
-//       staggerChildren: 0.5,
-//     },
-//   },
-// };
-
-// const AnimateTitle = {
-//   hidden: { opacity: 0 },
-//   show: {
-//     opacity: 1,
-//     transition: { duration: 2 },
-//   },
-// };
-
 const AboutSection = () => {
   return (
     <StyledAbout>
       <StyledDescription>
-        <motion.div
-        // variants={AnimateDescription}
-        // initial="hidden"
-        // animate="show"
-        >
-          <StyledHide>
-            <motion.h2
-            // variants={AnimateTitle}
-            >
-              We work to make
-            </motion.h2>
-          </StyledHide>
-          <StyledHide>
-            <motion.h2
-            // variants={AnimateTitle}
-            >
-              your <span>dreams</span>
-            </motion.h2>
-          </StyledHide>
-          <StyledHide>
-            <motion.h2
-            // variants={AnimateTitle}
-            >
-              come true.
-            </motion.h2>
-          </StyledHide>
-        </motion.div>
-        <p>
+        <StyledHide>
+          <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
+        </StyledHide>
+        <StyledHide>
+          <motion.h2 variants={titleAnimation}>
+            your <span>dreams</span>
+          </motion.h2>
+        </StyledHide>
+        <StyledHide>
+          <motion.h2 variants={titleAnimation}>come true.</motion.h2>
+        </StyledHide>
+        <motion.p variants={fadeAnimation}>
           Contact us for any photography or video graph ideas that you have. We
           have professionals with amazing skills to help you achieve it.{" "}
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fadeAnimation}>Contact Us</motion.button>
       </StyledDescription>
 
       <StyledImage>
-        <img src={home1} alt="guy with camera" />
+        <motion.img
+          variants={photoAnimation}
+          src={home1}
+          alt="guy with camera"
+        />
       </StyledImage>
     </StyledAbout>
   );
