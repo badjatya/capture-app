@@ -3,6 +3,9 @@ import React from "react";
 // Importing images
 import home1 from "../img/home1.png";
 
+// Importing Components
+import Wave from "./Wave";
+
 // Importing Lib
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -46,6 +49,7 @@ const AboutSection = () => {
           alt="guy with camera"
         />
       </StyledImage>
+      <Wave />
     </StyledAbout>
   );
 };
