@@ -8,6 +8,7 @@ import {
   pageAnimation,
   fadeAnimation,
   photoAnimation,
+  lineAnimation,
 } from "../styles/animations";
 
 // Import data
@@ -27,7 +28,7 @@ const OurWork = () => {
       {movies.map((movie) => (
         <StyledMovie key={movie.id}>
           <motion.h2 variants={fadeAnimation}>{movie.title}</motion.h2>
-          <div className="line" />
+          <motion.div variants={lineAnimation} className="line" />
           <Link to={`/work/${movie.id}`}>
             <StyledImg>
               <motion.img
@@ -84,7 +85,7 @@ const StyledMovie = styled.div`
   .line {
     height: 0.5rem;
     margin-bottom: 3rem;
-    background: #ccc;
+    background: #23d997;
   }
 
   img {

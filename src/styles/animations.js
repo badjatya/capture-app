@@ -43,7 +43,7 @@ export const fadeAnimation = {
     transition: {
       duration: 1,
       ease: "easeOut",
-      delay: 1,
+      delay: 0.5,
     },
   },
 };
@@ -59,7 +59,6 @@ export const photoAnimation = {
     transition: {
       duration: 1,
       ease: "easeOut",
-      delay: 0.5,
     },
   },
 };
@@ -76,6 +75,20 @@ export const waveAnimation = {
       duration: 1,
       ease: "easeOut",
       delay: 0.5,
+    },
+  },
+};
+
+export const lineAnimation = {
+  hidden: {
+    width: "0%",
+  },
+  show: {
+    width: "100%",
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+      delay: 1,
     },
   },
 };
