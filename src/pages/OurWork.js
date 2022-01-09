@@ -4,7 +4,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { pageAnimation } from "../styles/animations";
+import {
+  pageAnimation,
+  fadeAnimation,
+  photoAnimation,
+} from "../styles/animations";
 
 // Import data
 import MoviesData from "../data/movieData";
@@ -22,10 +26,16 @@ const OurWork = () => {
     >
       {movies.map((movie) => (
         <StyledMovie key={movie.id}>
-          <h2>{movie.title}</h2>
+          <motion.h2 variants={fadeAnimation}>{movie.title}</motion.h2>
           <div className="line" />
           <Link to={`/work/${movie.id}`}>
-            <img src={movie.mainImg} alt={movie.title} />
+            <StyledImg>
+              <motion.img
+                variants={photoAnimation}
+                src={movie.mainImg}
+                alt={movie.title}
+              />
+            </StyledImg>
           </Link>
         </StyledMovie>
       ))}
@@ -82,6 +92,10 @@ const StyledMovie = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+`;
+
+const StyledImg = styled.div`
+  overflow: hidden;
 `;
 
 export default OurWork;
