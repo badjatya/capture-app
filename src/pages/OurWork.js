@@ -9,6 +9,8 @@ import {
   fadeAnimation,
   photoAnimation,
   lineAnimation,
+  sliderContainer,
+  slider,
 } from "../styles/animations";
 
 // Import data
@@ -25,6 +27,13 @@ const OurWork = () => {
       exit="exit"
       style={{ background: "#fff" }}
     >
+      <motion.div variants={sliderContainer}>
+        <StyledFrame1 variants={slider}></StyledFrame1>
+        <StyledFrame2 variants={slider}></StyledFrame2>
+        <StyledFrame3 variants={slider}></StyledFrame3>
+        <StyledFrame4 variants={slider}></StyledFrame4>
+      </motion.div>
+
       {movies.map((movie) => (
         <StyledMovie key={movie.id}>
           <motion.h2 variants={fadeAnimation}>{movie.title}</motion.h2>
@@ -40,30 +49,6 @@ const OurWork = () => {
           </Link>
         </StyledMovie>
       ))}
-
-      {/* <StyledMovie>
-        <h2>The Athlete</h2>
-        <div className="line" />
-        <Link to="/work/athlete">
-          <img src={athleteImage} alt="athlete pic" />
-        </Link>
-      </StyledMovie> */}
-
-      {/* <StyledMovie>
-        <h2>The Racer</h2>
-        <div className="line" />
-        <Link to="/work/racer">
-          <img src={theRacerImage} alt="racer pic" />
-        </Link>
-      </StyledMovie>
-
-      <StyledMovie>
-        <h2>The Good Times</h2>
-        <div className="line" />
-        <Link to="/work/good">
-          <img src={goodTimesImage} alt="good times pic" />
-        </Link>
-      </StyledMovie> */}
     </StyledWork>
   );
 };
@@ -97,6 +82,26 @@ const StyledMovie = styled.div`
 
 const StyledImg = styled.div`
   overflow: hidden;
+`;
+
+//Frame Animation
+const StyledFrame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+`;
+const StyledFrame2 = styled(StyledFrame1)`
+  background: #ff8efb;
+`;
+const StyledFrame3 = styled(StyledFrame1)`
+  background: #8ed2ff;
+`;
+const StyledFrame4 = styled(StyledFrame1)`
+  background: #8effa0;
 `;
 
 export default OurWork;
